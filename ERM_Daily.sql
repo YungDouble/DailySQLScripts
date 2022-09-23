@@ -1,0 +1,65 @@
+--ERM Server
+USE YellowFolderProd
+GO
+
+SELECT ma.alias, scm_user_name, fk_account_id, first_name, last_name, is_active
+FROM mst_user_info mui
+JOIN dbo.mst_account ma
+ON mui.fk_account_id = ma.[pk_account_id]
+WHERE scm_user_name LIKE (
+'%clark.kyschools.us%'
+)
+
+SELECT * FROM mst_account
+WHERE pk_account_id = 1413
+
+UPDATE mst_user_info
+SET last_name = 'Jones'
+WHERE scm_user_name = 'jonesa@nlrsd.org'
+
+SELECT * FROM mst_user_info
+WHERE last_name LIKE 'Stocke%'
+AND first_name LIKE 'James%'
+
+--SELECT * FROM mst_user_info
+--WHERE pk_user_info_id IN (
+
+--)
+
+--SELECT * FROM [dbo].[record_series_user_mapping]
+--WHERE fk_record_series_account_mapping_id = ''
+
+--Update mst_user_info
+--set scanning_type = 'M' where scm_user_name IN ('dmsadmin.rcc@yellowfolder.com') and scanning_type = 'C'
+
+--select *
+--from mst_user_info
+--where scm_user_name IN ('emily.burton@covington.kyschools.us')
+
+
+--select *
+--from mst_user_info
+--where scm_user_name IN ('cory.allison@northpolk.org')
+
+--select * from mst_user_info
+--where scm_user_name IN ('therealdavos@gmail.com')
+
+Update mst_user_info
+SET is_active = 1
+where scm_user_name IN (
+'tania.arvin@clark.kyschools.us'
+)
+
+
+
+Update mst_user_info
+SET scm_user_name = 'sabatinie@clarke.k12.ga.us'
+where scm_user_name IN ('sabatine@clarke.k12.ga.us')
+
+
+
+
+
+
+
+
