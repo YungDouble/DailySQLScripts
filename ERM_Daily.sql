@@ -2,24 +2,22 @@
 USE YellowFolderProd
 GO
 
+--To find what account a user belongs to based off their email
 SELECT ma.alias, scm_user_name, fk_account_id, first_name, last_name, is_active
 FROM mst_user_info mui
 JOIN dbo.mst_account ma
 ON mui.fk_account_id = ma.[pk_account_id]
 WHERE scm_user_name LIKE (
-'%clark.kyschools.us%'
+'%drewcharter%'
 )
 
 SELECT * FROM mst_account
 WHERE pk_account_id = 1413
 
-UPDATE mst_user_info
-SET last_name = 'Jones'
-WHERE scm_user_name = 'jonesa@nlrsd.org'
 
 SELECT * FROM mst_user_info
-WHERE last_name LIKE 'Stocke%'
-AND first_name LIKE 'James%'
+WHERE last_name LIKE '%'
+AND first_name LIKE '%'
 
 --SELECT * FROM mst_user_info
 --WHERE pk_user_info_id IN (
@@ -44,22 +42,13 @@ AND first_name LIKE 'James%'
 --select * from mst_user_info
 --where scm_user_name IN ('therealdavos@gmail.com')
 
-Update mst_user_info
-SET is_active = 1
-where scm_user_name IN (
-'tania.arvin@clark.kyschools.us'
-)
+--Update mst_user_info
+--SET is_active = 1
+--where scm_user_name IN (
+--''
+--)
 
-
-
-Update mst_user_info
-SET scm_user_name = 'sabatinie@clarke.k12.ga.us'
-where scm_user_name IN ('sabatine@clarke.k12.ga.us')
-
-
-
-
-
-
-
+--Update mst_user_info
+--SET scm_user_name = ''
+--where scm_user_name IN ('sabatine@clarke.k12.ga.us')
 
