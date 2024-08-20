@@ -17,12 +17,6 @@ FROM [batch] b (NOLOCK)
 	 JOIN mst_status ms (NOLOCK)
 	 ON ms.pk_status_id = b.fk_batch_status_id
 WHERE
---b.batch_name IN (
---'FRMD04262023-7204590_FRM_SR_Categorize Scan'
---,'FRMD04262023-7204592_FRM_SR_Categorize Scan'
---,'FRMD04262023-7204639_FRM_SR_Categorize Scan'
---)
---b.created_by = 11180
 b.fk_account_id NOT IN (1130,79,1331)
 --AND ma.alias = 'JFC'
 AND b.scan_type = 'C'
