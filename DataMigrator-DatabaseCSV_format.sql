@@ -23,6 +23,3 @@ SELECT TOP (100000)
       ISNULL([InsertUpdateFlag], '') AS InsertUpdateFlag -- Replace NULL with empty string
   FROM [yfSTN].[dbo].[tPersonData]
   WHERE RecordSeriesId = 3;
-
-  SELECT * FROM dbo.tPersonData
-  WHERE LastName LIKE 'FARINA%'
