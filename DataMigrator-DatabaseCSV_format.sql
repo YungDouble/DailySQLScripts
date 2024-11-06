@@ -22,4 +22,4 @@ SELECT TOP (100000)
       ISNULL([ScanType], '') AS ScanType, -- Replace NULL with empty string
       ISNULL([InsertUpdateFlag], '') AS InsertUpdateFlag -- Replace NULL with empty string
   FROM [yfSTN].[dbo].[tPersonData]
-  WHERE RecordSeriesId = 3;
+  WHERE RecordSeriesId = 1;
