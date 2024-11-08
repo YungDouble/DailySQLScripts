@@ -1,4 +1,4 @@
-USE yfSTN
+USE yfSAG
 GO
 
 SELECT TOP (100000) 
@@ -22,4 +22,4 @@ SELECT TOP (100000)
       ISNULL([ScanType], '') AS ScanType, -- Replace NULL with empty string
       ISNULL([InsertUpdateFlag], '') AS InsertUpdateFlag -- Replace NULL with empty string
   FROM [yfSTN].[dbo].[tPersonData]
-  WHERE RecordSeriesId = 1;
+  WHERE RecordSeriesId = 3;
