@@ -1,4 +1,4 @@
-USE yfSAG
+USE yfSTN
 GO
 
 SELECT TOP (100000) 
