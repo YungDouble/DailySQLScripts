@@ -1,4 +1,4 @@
-USE yfSTN
+USE yfBMH
 GO
 
 SELECT TOP (100000) 
@@ -21,5 +21,5 @@ SELECT TOP (100000)
       ISNULL([Alias], '') AS Alias,   -- Replace NULL with empty string
       ISNULL([ScanType], '') AS ScanType, -- Replace NULL with empty string
       ISNULL([InsertUpdateFlag], '') AS InsertUpdateFlag -- Replace NULL with empty string
-  FROM [yfSTN].[dbo].[tPersonData]
+  FROM [yfBMH].[dbo].[tPersonData]
   WHERE RecordSeriesId = 3;
