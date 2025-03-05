@@ -1,6 +1,6 @@
 USE yfBMH
 GO
-
+--redo since last count was way off 
 SELECT TOP (100000) 
       [Id],
       [RecordSeriesId],
