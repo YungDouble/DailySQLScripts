@@ -1,4 +1,4 @@
-USE yfBMH
+USE yfCNT
 GO
 --redo since last count was way off 
 SELECT TOP (100000) 
@@ -21,5 +21,5 @@ SELECT TOP (100000)
       ISNULL([Alias], '') AS Alias,   -- Replace NULL with empty string
       ISNULL([ScanType], '') AS ScanType, -- Replace NULL with empty string
       ISNULL([InsertUpdateFlag], '') AS InsertUpdateFlag -- Replace NULL with empty string
-  FROM [yfBMH].[dbo].[tPersonData]
+  FROM [yfCNT].[dbo].[tPersonData]
   WHERE RecordSeriesId = 3;
