@@ -1,7 +1,9 @@
 USE yfBMH
 GO
       
-
+USE yfSAG
+GO
+      
 SELECT TOP (100000) 
       [Id],
       [RecordSeriesId],
