@@ -1,32 +1,6 @@
 USE yfBMH
 GO
-
     
---SELECT * FROM dbo.tDocDetails
---WHERE BoxNumber In (
---'BMHDM-06042024-PartA1'
---, 'BMHDM-06052024-PartA2'
---)
-
-/****** Script for SelectTopNRows command from SSMS  ******/
---SELECT TOP (125000) [Id]
---    [RSId]
---      ,[IsActiveDoc]
---      ,[PersonDataId]
---      ,[AccountTemplateId]
---      ,[DocDate]
---      ,[BoxNumber]
---      ,[ScannedBy]
---      ,[OriginalDocumentName]
---      ,[AccountIdMetaData]
---      ,[DocIdMetaData]
---      ,[CustomDocumentName]
---      ,[OriginalDocumentName_OldDMS]
---      ,[IsDeleted]
---  FROM [yfBMH].[dbo].[tDocDetails]
---  WHERE BoxNumber LIKE '%GeneralPersonn%'
---  AND RSId = 3
-
 SELECT 
     'TOTAL' AS BoxNumber, 
     COUNT(*) AS FileCount,
